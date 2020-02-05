@@ -1,4 +1,4 @@
-<div class="well hoverwell thumbnail">
+<div class="well hoverwell thumbnail" [routerLink]="['/events', eventInput.id]">
     <h2>{{eventInput.name}}</h2>
     <div>Date: {{eventInput.date}}</div>
     <div [ngClass]="getTimeClass()" [ngSwitch]="eventInput.time">
