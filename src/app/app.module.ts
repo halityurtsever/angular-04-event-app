@@ -12,6 +12,7 @@ import { RouterModule } from '@angular/router';
 import { appRoutes } from './app-routes.component';
 import { CreateEventComponent } from './events/create-event.component';
 import { PageNotFoundComponent } from './error-pages/page-not-found-404.component';
+import { EventRouteActivatorService } from './events/event-details/event-route-activator.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { PageNotFoundComponent } from './error-pages/page-not-found-404.componen
     BrowserModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [EventService, ToastrService],
+  providers: [EventService, ToastrService, EventRouteActivatorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
