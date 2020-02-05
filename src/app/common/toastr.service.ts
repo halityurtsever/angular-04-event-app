@@ -7,7 +7,7 @@ declare let toastr: any;
 })
 export class ToastrService {
 
-  info(message: string, title?: string){
+  info(message: string, title?: string) {
     toastr.info(message, title);
   }
 

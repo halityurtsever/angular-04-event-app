@@ -5,17 +5,15 @@ import { EventService } from '../shared/event.service';
 @Injectable({
   providedIn: 'root'
 })
-export class EventRouteActivatorService implements CanActivate{
+export class EventRouteActivatorService implements CanActivate {
 
-  constructor(private eventService: EventService,
-    private router: Router) { }
+  constructor(private eventService: EventService, private router: Router) { }
 
   canActivate(route: ActivatedRouteSnapshot) {
     // !! operator converts object to boolean. if null "false" else "true"
-    const isEventValid = !!this.eventService.getEvent(+route.params['id']);
+    const isEventValid = !!this.eventService.getEvent(+route.paramMap.get('id'));
 
-    if(!isEventValid)
-    {
+    if (!isEventValid) {
       this.router.navigate(['/404']);
     }
 

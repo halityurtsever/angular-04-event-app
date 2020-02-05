@@ -6,10 +6,10 @@ import { Router } from '@angular/router';
   styles: []
 })
 export class CreateEventComponent implements OnInit {
-  isDirty: boolean = true;
+  isDirty = true;
   constructor(private router: Router) { }
 
-  goBack(){
+  goBack() {
     this.router.navigate(['/events']);
   }
 

@@ -43,7 +43,7 @@ export class AppModule { }
 
 export function checkDirtyState(component: CreateEventComponent) {
   if (component.isDirty) {
-    return window.confirm("You have unsaved changes. Do you really want to leave this page?");
+    return window.confirm('You have unsaved changes. Do you really want to leave this page?');
   }
   return true;
 }

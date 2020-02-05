@@ -7,16 +7,15 @@ import { ToastrService } from '../common/toastr.service';
 })
 export class EventsListComponent implements OnInit {
   events: any[];
-  constructor(private eventService: EventService,
-    private toastr: ToastrService) {
-    
+  constructor(private eventService: EventService, private toastr: ToastrService) {
+
   }
 
   ngOnInit(): void {
     this.events = this.eventService.getEvents();
   }
 
-  onThumbnailClick(eventName){
+  onThumbnailClick(eventName) {
     this.toastr.info(eventName);
   }
 }
