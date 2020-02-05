@@ -6,7 +6,7 @@ import { PageNotFoundComponent } from './error-pages/page-not-found-404.componen
 import { EventRouteActivatorService } from './events/event-details/event-route-activator.service';
 
 export const appRoutes: Routes = [
-    { path: 'events/new', component: CreateEventComponent },
+    { path: 'events/new', component: CreateEventComponent, canDeactivate: ['canDeactivateCreateEvent'] },
     { path: 'events', component: EventsListComponent },
     { path: 'events/:id', component: EventDetailsComponent, canActivate: [EventRouteActivatorService] },
     { path: '404', component: PageNotFoundComponent },
