@@ -3,8 +3,11 @@
     <div>Date: {{eventInput.date}}</div>
     <div>Time: {{eventInput.time}}</div>
     <div>Price: {{eventInput.price | currency}}</div>
-    <div>
+    <div *ngIf="eventInput.location">
         <span>Location: {{eventInput.location.address}} </span>
         <span>{{eventInput.location.city}}, {{eventInput.location.country}}</span>
+    </div>
+    <div *ngIf="eventInput.onlineUrl">
+        <span>Online URL: {{eventInput.onlineUrl}} </span>
     </div>
 </div>
