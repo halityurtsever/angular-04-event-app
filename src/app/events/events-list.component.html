@@ -1,6 +1,10 @@
 <div>
     <h1>Upcoming Angular Events</h1>
     <hr />
+    <!-- one second delay in event.service.ts -->
+    <div *ngIf="!events">
+        <h2>Loading...</h2>
+    </div>
     <div class="row">
         <div class="col-xs-6" *ngFor="let event of events">
             <app-event-thumbnail (click)="onThumbnailClick(event.name)" [eventInput]="event"></app-event-thumbnail>
