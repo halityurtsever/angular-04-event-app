@@ -1,17 +1,17 @@
 import { ISessionModel } from './session-model';
 
 export interface IEventModel {
-    id: number,
-    name: string,
-    date: Date,
-    time: string,
-    price: number,
-    imageUrl: string,
+    id: number;
+    name: string;
+    date: Date;
+    time: string;
+    price: number;
+    imageUrl: string;
     location?: {
-        address: string,
-        city: string,
-        country: string
-    },
-    onlineUrl?: string,
-    sessions: ISessionModel[]
+        address: string;
+        city: string;
+        country: string;
+    };
+    onlineUrl?: string;
+    sessions: ISessionModel[];
 }

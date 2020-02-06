@@ -9,7 +9,7 @@ export class EventService {
 
   getEvents(): Observable<IEventModel[]> {
     // put events data into an Observable
-    let subject = new Subject<IEventModel[]>();
+    const subject = new Subject<IEventModel[]>();
 
     setTimeout(() => {
       subject.next(events);
