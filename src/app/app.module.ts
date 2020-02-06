@@ -13,6 +13,7 @@ import { appRoutes } from './app-routes.component';
 import { CreateEventComponent } from './events/create-event.component';
 import { PageNotFoundComponent } from './error-pages/page-not-found-404.component';
 import { EventRouteActivatorService } from './events/event-details/event-route-activator.service';
+import { EventsListResolverService } from './events/events-list-resolver.service';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { EventRouteActivatorService } from './events/event-details/event-route-a
     EventService,
     ToastrService,
     EventRouteActivatorService,
+    EventsListResolverService,
     {
       provide: 'canDeactivateCreateEvent',
       useValue: checkDirtyState
