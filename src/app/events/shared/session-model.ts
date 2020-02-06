@@ -1,6 +1,6 @@
 export interface ISessionModel {
     id: number,
-    nme: string,
+    name: string,
     presenter: string,
     duration: number,
     level: string,
