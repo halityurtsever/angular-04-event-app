@@ -1,19 +1,22 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { BrowserModule } from '@angular/platform-browser';
+
+import {
+  EventService,
+  CreateEventComponent,
+  EventThumbnailComponent,
+  EventsListComponent,
+  EventDetailsComponent,
+  EventRouteActivatorService,
+  EventsListResolverService
+} from './events/index';
 
 import { AppComponent } from './app.component';
-import { EventsListComponent } from './events/events-list.component';
-import { EventThumbnailComponent } from './events/event-thumbnail.component';
-import { NavbarComponent } from './nav/navbar.component';
-import { EventService } from './events/shared/event.service';
-import { ToastrService } from './common/toastr.service';
-import { EventDetailsComponent } from './events/event-details/event-details.component';
-import { RouterModule } from '@angular/router';
 import { appRoutes } from './app-routes.component';
-import { CreateEventComponent } from './events/create-event.component';
+import { ToastrService } from './common/toastr.service';
+import { NavbarComponent } from './nav/navbar.component';
 import { PageNotFoundComponent } from './error-pages/page-not-found-404.component';
-import { EventRouteActivatorService } from './events/event-details/event-route-activator.service';
-import { EventsListResolverService } from './events/events-list-resolver.service';
 
 @NgModule({
   declarations: [
@@ -41,6 +44,7 @@ import { EventsListResolverService } from './events/events-list-resolver.service
   ],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
 
 export function checkDirtyState(component: CreateEventComponent) {
