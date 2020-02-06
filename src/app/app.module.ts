@@ -17,6 +17,7 @@ import { appRoutes } from './app-routes.component';
 import { ToastrService } from './common/toastr.service';
 import { NavbarComponent } from './nav/navbar.component';
 import { PageNotFoundComponent } from './error-pages/page-not-found-404.component';
+import { AuthenticationService } from './user/authentication.service';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { PageNotFoundComponent } from './error-pages/page-not-found-404.componen
     ToastrService,
     EventRouteActivatorService,
     EventsListResolverService,
+    AuthenticationService,
     {
       provide: 'canDeactivateCreateEvent',
       useValue: checkDirtyState
